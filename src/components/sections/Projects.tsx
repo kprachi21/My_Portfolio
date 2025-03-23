@@ -19,7 +19,7 @@ const projects = [
     title: "KnowFlow",
     description: "Innovated an offline AI platform using Llama 3.2 for text, image, and data analysis, enabling automated dataset visualization and 4-bit quantization, optimized to run on devices with 8GB+ RAM",
     tags: ["AI", "Llama 3.2", "Data Visualization", "Quantization", "Python"],
-    imageSrc: "https://images.unsplash.com/photo-1677442136019-21780ecad942?q=80&w=2232&auto=format&fit=crop"
+    imageSrc: "/lovable-uploads/bb4275db-d85d-4391-aac7-8ebea4fe7aed.png"
   },
   {
     title: "Breast Cancer Diagnostics",

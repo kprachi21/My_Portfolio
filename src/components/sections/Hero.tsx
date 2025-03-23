@@ -4,8 +4,16 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-16 pb-20">
-      <div className="container-tight">
+    <section className="min-h-screen flex items-center pt-16 pb-20 relative">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 after:absolute after:inset-0 after:bg-background/80 dark:after:bg-background/90"
+        style={{ 
+          backgroundImage: 'url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop")',
+        }}
+      ></div>
+      
+      <div className="container-tight relative z-10">
         <div className="flex flex-col items-center text-center">
           <div className="mb-6 animate-hidden animate-fade-in">
             <span className="inline-block px-3 py-1 text-sm bg-primary/10 text-primary rounded-full">
