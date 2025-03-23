@@ -31,9 +31,9 @@ export default function AnimatedImage({
         src={src}
         alt={alt}
         className={cn(
-          "w-full h-full object-cover transition-all duration-700",
+          "w-full h-full transition-all duration-700",
           isLoaded ? "opacity-100 animate-image-reveal" : "opacity-0 blur-md",
-          imgClassName
+          imgClassName || "object-cover"
         )}
       />
       {!isLoaded && (

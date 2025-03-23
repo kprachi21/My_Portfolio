@@ -119,8 +119,8 @@ export default {
         "border-beam": "border-beam 2s linear infinite",
       },
       fontFamily: {
-        sans: ['"Inter"', 'sans-serif'],
-        display: ['"Playfair Display"', 'serif'],
+        sans: ['"Roboto"', '"Inter"', 'sans-serif'],
+        display: ['"Montserrat"', '"Playfair Display"', 'serif'],
       },
       boxShadow: {
         'soft': '0 4px 15px rgba(0, 0, 0, 0.02)',

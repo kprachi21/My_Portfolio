@@ -1,7 +1,7 @@
 
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedImage from "@/components/ui/AnimatedImage";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function About() {
@@ -18,7 +18,8 @@ export default function About() {
             <AnimatedImage
               src="/lovable-uploads/f9e98c5a-785d-4c41-9623-8ec2d6b74a28.png"
               alt="Prachi Khopkar"
-              className="rounded-xl overflow-hidden w-full max-w-xs aspect-square shadow-soft animate-hidden animate-slide-in-up"
+              className="rounded-xl overflow-hidden w-full max-w-xs shadow-soft animate-hidden animate-slide-in-up"
+              imgClassName="object-contain" // Changed to object-contain to show the full head
             />
             
             <div className="mt-6 flex items-center justify-center gap-3 animate-hidden animate-slide-in-up animate-delay-200">
@@ -38,8 +39,13 @@ export default function About() {
                 </a>
               </Button>
               <Button asChild variant="ghost" size="icon" className="rounded-full">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <a href="https://github.com/kprachi21" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                   <Github className="h-5 w-5" strokeWidth={1.5} />
+                </a>
+              </Button>
+              <Button asChild variant="ghost" size="icon" className="rounded-full">
+                <a href="https://leetcode.com/u/khopkarprachi21/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode Profile">
+                  <Code className="h-5 w-5" strokeWidth={1.5} />
                 </a>
               </Button>
             </div>
@@ -84,6 +90,18 @@ export default function About() {
                     <Linkedin className="h-4 w-4 text-primary" strokeWidth={1.5} />
                     <a href="https://linkedin.com/in/prachi-khopkar/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                       linkedin.com/in/prachi-khopkar/
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Github className="h-4 w-4 text-primary" strokeWidth={1.5} />
+                    <a href="https://github.com/kprachi21" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      github.com/kprachi21
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Code className="h-4 w-4 text-primary" strokeWidth={1.5} />
+                    <a href="https://leetcode.com/u/khopkarprachi21/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      leetcode.com/u/khopkarprachi21
                     </a>
                   </li>
                 </ul>
