@@ -24,10 +24,10 @@ export default function Timeline({
           
           <div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-              <h3 className="text-xl font-medium font-display">{item.title}</h3>
+              <h3 className="font-display text-xl font-bold">{item.title}</h3>
               <span className="text-sm text-muted-foreground">{item.date}</span>
             </div>
-            <p className="text-muted-foreground mb-3">{item.subtitle}</p>
+            <p className="mb-3 font-bold text-indigo-800">{item.subtitle}</p>
             <ul className="space-y-2">
               {item.description.map((bullet, idx) => <li key={idx} className="flex">
                   <span className="mr-2">-</span>
