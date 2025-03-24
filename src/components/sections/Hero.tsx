@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 pb-20 relative bg-cover bg-center" 
-      style={{ backgroundImage: "url('/lovable-uploads/f9e98c5a-785d-4c41-9623-8ec2d6b74a28.png')" }}>
+      style={{ backgroundImage: "url('/lovable-uploads/79b2d53f-bb1b-4b96-94df-1fcd8296a3c0.png')" }}>
       
       {/* Overlay to enhance text readability */}
       <div className="absolute inset-0 bg-black/20"></div>
@@ -39,12 +39,15 @@ export default function Hero() {
               </a>
             </Button>
           </div>
-          
-          <a href="#about" className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors animate-pulse-soft animate-hidden animate-fade-in animate-delay-400">
-            <span className="mb-2 text-sm">Scroll Down</span>
-            <ArrowDown className="h-4 w-4" strokeWidth={1.5} />
-          </a>
         </div>
+      </div>
+      
+      {/* Moved the scroll down to be positioned absolutely at the bottom */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors animate-pulse-soft animate-hidden animate-fade-in animate-delay-400">
+        <a href="#about" className="flex flex-col items-center">
+          <span className="mb-2 text-sm">Scroll Down</span>
+          <ArrowDown className="h-4 w-4" strokeWidth={1.5} />
+        </a>
       </div>
     </section>
   );
