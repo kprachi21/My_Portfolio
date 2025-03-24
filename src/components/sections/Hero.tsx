@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center pt-16 pb-20 relative">
-      {/* Background image with overlay - light colored and interactive */}
+      {/* Background image with overlay - analytics data visualization background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 after:absolute after:inset-0 after:bg-background/60 dark:after:bg-background/70"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 after:absolute after:inset-0 after:bg-white/85 dark:after:bg-background/90"
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop")',
+          backgroundImage: 'url("/lovable-uploads/7bace674-8360-434d-a4c5-cbfd8be3f643.png")',
         }}
       >
         {/* Interactive light particles effect for background */}
@@ -25,16 +25,16 @@ export default function Hero() {
       <div className="container-tight relative z-10">
         <div className="flex flex-col items-center text-center">
           <div className="mb-6 animate-hidden animate-fade-in">
-            <span className="inline-block px-3 py-1 text-sm bg-primary/10 text-primary rounded-full">
+            <span className="inline-block px-3 py-1 text-sm bg-primary/10 text-primary rounded-full font-medium">
               Data Engineer & Business Analyst
             </span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold mb-6 animate-hidden animate-fade-in animate-delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold mb-6 animate-hidden animate-fade-in animate-delay-100 text-gray-900 dark:text-gray-100">
             Prachi Khopkar
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-hidden animate-fade-in animate-delay-200">
+          <p className="text-xl md:text-2xl text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-8 animate-hidden animate-fade-in animate-delay-200 font-medium">
             Transforming complex data challenges into valuable business insights
           </p>
           
@@ -54,9 +54,9 @@ export default function Hero() {
           
           <a 
             href="#about" 
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors animate-pulse-soft animate-hidden animate-fade-in animate-delay-400"
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-foreground transition-colors animate-pulse-soft animate-hidden animate-fade-in animate-delay-400"
           >
-            <span className="mb-2 text-sm">Scroll Down</span>
+            <span className="mb-2 text-sm font-medium">Scroll Down</span>
             <ArrowDown className="h-4 w-4" strokeWidth={1.5} />
           </a>
         </div>
