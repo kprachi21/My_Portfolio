@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 pb-20 relative bg-cover bg-center" 
-      style={{ backgroundImage: "url('/lovable-uploads/07640d10-5cee-4a0c-bcb5-619e4a3c58ca.png')" }}>
+      style={{ backgroundImage: "url('/lovable-uploads/cbe8ec14-aa2b-4cb9-aeb8-0e7d092ba058.png')" }}>
       
       {/* Overlay to enhance text readability */}
       <div className="absolute inset-0 bg-black/30"></div>
