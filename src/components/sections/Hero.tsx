@@ -4,12 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 pb-20 relative bg-cover bg-center" 
-      style={{ backgroundImage: "url('/lovable-uploads/243c70d3-e0f0-4398-9500-8c79b50e217f.png')" }}>
-      
-      {/* Overlay to enhance text readability */}
-      <div className="absolute inset-0 bg-black/20"></div>
-      
+    <section className="min-h-screen flex items-center justify-center pt-16 pb-20 relative">
       <div className="container-tight relative z-10">
         <div className="flex flex-col items-center text-center">
           <div className="mb-6 animate-hidden animate-fade-in">
@@ -42,7 +37,7 @@ export default function Hero() {
         </div>
       </div>
       
-      {/* Moved the scroll down to be positioned absolutely at the bottom */}
+      {/* Scroll down positioned at the bottom */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors animate-pulse-soft animate-hidden animate-fade-in animate-delay-400">
         <a href="#about" className="flex flex-col items-center">
           <span className="mb-2 text-sm">Scroll Down</span>
