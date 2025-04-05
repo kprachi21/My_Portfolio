@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import emailjs from 'emailjs-com';
 
 // Form validation schema
 const formSchema = z.object({
@@ -28,11 +26,8 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-// EmailJS configuration
-// You need to replace these with your own EmailJS values
-const EMAILJS_SERVICE_ID = "service_9za58su";
-const EMAILJS_TEMPLATE_ID = "template_bjranp2";
-const EMAILJS_USER_ID = "6thkW3YHzXkLQfHj3";
+// Formspree form ID - replace with your own
+const FORMSPREE_FORM_ID = "xqkvrpbe";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -52,33 +47,34 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // Prepare template parameters for EmailJS
-      const templateParams = {
-        from_name: values.name,
-        reply_to: values.email,
-        message: values.message
-      };
+      console.log("Sending form data:", values);
       
-      console.log("Sending email with parameters:", templateParams);
-
-      // Send email using EmailJS
-      const response = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
-      );
-      
-      console.log("Email sent successfully:", response);
-      
-      // Success message
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+      // Send form data to Formspree
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(values)
       });
       
-      // Reset the form
-      form.reset();
+      const data = await response.json();
+      
+      if (response.ok) {
+        console.log("Form submitted successfully:", data);
+        
+        // Success message
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        
+        // Reset the form
+        form.reset();
+      } else {
+        throw new Error(data.error || 'Form submission failed');
+      }
     } catch (error) {
       console.error("Form submission error:", error);
       toast({
