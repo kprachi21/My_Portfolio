@@ -17,6 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import emailjs from 'emailjs-com';
 
 // Form validation schema
 const formSchema = z.object({
@@ -26,6 +27,12 @@ const formSchema = z.object({
 });
 
 type FormValues = z.infer<typeof formSchema>;
+
+// EmailJS configuration
+// You need to replace these with your own EmailJS values
+const EMAILJS_SERVICE_ID = "service_9za58su";
+const EMAILJS_TEMPLATE_ID = "template_bjranp2";
+const EMAILJS_USER_ID = "6thkW3YHzXkLQfHj3";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -45,11 +52,24 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // In a real application, you would send this data to your backend
-      console.log("Form data submitted:", values);
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: values.name,
+        reply_to: values.email,
+        message: values.message
+      };
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      console.log("Sending email with parameters:", templateParams);
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+      
+      console.log("Email sent successfully:", response);
       
       // Success message
       toast({
