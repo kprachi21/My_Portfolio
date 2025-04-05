@@ -43,7 +43,7 @@ const experiences: ExperienceItem[] = [
   {
     title: "Senior Data Engineer",
     company: "Quantiphi Analytics Solutions Pvt Ltd",
-    date: "July 2020 - June 2023",
+    date: "January 2022 - June 2023",
     summary: "Optimized database queries and developed AWS data pipelines for improved data processing.",
     details: [
       "Optimized PostgreSQL queries that reduced query time by 90%.",
@@ -56,7 +56,7 @@ const experiences: ExperienceItem[] = [
   {
     title: "Data Engineer",
     company: "Quantiphi Analytics Solutions Pvt Ltd",
-    date: "July 2020 - June 2023",
+    date: "July 2020 - December 2021",
     summary: "Created data tools for clients using cloud technologies and improved data accessibility.",
     details: [
       "Created data tools for Google and Stanford School of Medicine using Hadoop, Looker, and Cloud Composer.",
